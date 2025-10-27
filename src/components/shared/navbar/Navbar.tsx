@@ -65,13 +65,13 @@ export default function Navbar() {
         ${
           isScrolled
             ? "bg-black mt-0"
-            : "bg-transparent lg:bg-transparent backdrop-blur-[44px] lg:backdrop-blur-none lg:mt-10 mt-2"
+            : "bg-transparent lg:bg-transparent  lg:backdrop-blur-none mt-6  lg:mt-10 "
         }
         ${showNavbar ? "translate-y-0" : "-translate-y-28"}
       `}
     >
       <div
-        className={`container mx-auto px-4 lg:px-9 py-4 transition-colors duration-300`}
+        className={`container mx-auto px-6 lg:px-9 py-4 transition-colors duration-300`}
       >
         <div className="flex items-center justify-between">
           {/* Logo */}
