@@ -1,8 +1,8 @@
 const navItems = [
-  { label: "Explore", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Terms & Conditions", href: "/terms-condition" },
-  { label: "Privacy policy", href: "/privacy-policy" },
+  { labelKey: "nav.explore", href: "/" },
+  { labelKey: "nav.about", href: "/about" },
+  { labelKey: "nav.terms", href: "/terms-condition" },
+  { labelKey: "nav.privacy", href: "/privacy-policy" },
 ];
 
 export default navItems;

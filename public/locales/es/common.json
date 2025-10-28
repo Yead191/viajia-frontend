@@ -1,6 +1,6 @@
 {
   "banner": {
-    "heading": "Tu <highlight>viaje</highlight> perfecto, diseñado por inteligencia artificial",
+    "heading": "Tu <highlight>viaje</highlight> perfecto, diseñado por Inteligencia Artificial",
     "highlight": "viaje, ",
     "description1": "<highlight>Viajia</highlight> — crea itinerarios personalizados en tiempo real según tus preferencias, presupuesto y estilo de viaje. Desde vuelos y hoteles hasta experiencias únicas, todo en un solo lugar.",
     "desHighlight": "Viajia",
@@ -27,5 +27,42 @@
         "description": "Restaurantes y actividades seleccionados que coinciden con tus gustos."
       }
     ]
-  }
+  },
+  "nav": {
+    "explore": "Explorar",
+    "about": "Acerca de",
+    "terms": "Términos y Condiciones",
+    "privacy": "Política de Privacidad",
+    "download": "Descargar App",
+    "menu": "Menú",
+    "language": "Idioma"
+  },
+  "viajiaSpecialty": {
+    "heading": "¿Qué hace a <highlight>VIAJIA</highlight> Especial?",
+    "subtitle": "La especialidad de Viajia es entenderte. Nuestra IA combina vuelos, hoteles y experiencias en un itinerario personalizado que se adapta perfectamente a tu estilo y presupuesto. Todo lo que necesitas para tu viaje, en un solo lugar.",
+    "googlePlay": "Google Play",
+    "appStore": "App Store"
+  },
+  "faq": [
+    {
+      "question": "¿Cuál es el proceso de cambio/reemisión de la fecha del ticket para un niño que pasará de niño a adulto?",
+      "answer": "Puedes solicitar un cambio de fecha o reemisión del ticket a través de la plataforma. Las políticas específicas dependen de la aerolínea, te guiaremos según los detalles de tu vuelo."
+    },
+    {
+      "question": "¿Por qué no se mencionan las reglas de tarifas aéreas?",
+      "answer": "Seguimos la política de reembolso de la aerolínea y cada vuelo tiene políticas diferentes. Te podremos informar la política de reembolso para un vuelo específico."
+    },
+    {
+      "question": "¿Puede proporcionar las tarifas por persona o por habitación en VIAJIA?",
+      "answer": "Sí, las tarifas se pueden consultar por persona o por habitación en VIAJIA. Las tarifas varían según la propiedad, fechas y ocupación."
+    },
+    {
+      "question": "¿Puedo buscar hoteles económicos en Share Trip?",
+      "answer": "Sí, puedes filtrar hoteles por presupuesto en Share Trip para encontrar opciones que se ajusten a tus requisitos."
+    },
+    {
+      "question": "¿Cuál es el proceso de cambio/reemisión de la fecha del ticket para un niño que pasará de niño a adulto?",
+      "answer": "Puedes solicitar un cambio de fecha o reemisión del ticket para un niño que pasa a adulto a través de la plataforma. Las políticas varían según la aerolínea y el tipo de tarifa."
+    }
+  ]
 }

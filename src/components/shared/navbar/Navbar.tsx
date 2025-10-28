@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useMemo, useEffect, useRef } from "react";
-import { DownOutlined, MenuOutlined, CloseOutlined } from "@ant-design/icons";
+import { DownOutlined, MenuOutlined } from "@ant-design/icons";
 import Image from "next/image";
 import navItems from "@/constants/navItem";
 import Link from "next/link";
@@ -12,7 +12,7 @@ import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
   const pathname = usePathname();
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [language, setLanguage] = useState<"en" | "es">("en");
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -116,7 +116,7 @@ export default function Navbar() {
                       : "none",
                 }}
               >
-                {item.label}
+                {t(item.labelKey)}
               </Link>
             ))}
           </div>
@@ -178,7 +178,7 @@ export default function Navbar() {
         <Drawer
           title={
             <div className="flex justify-between items-center">
-              <span className="font-semibold text-lg">Menu</span>
+              <span className="font-semibold text-lg">{t("nav.menu")}</span>
               {/* <CloseOutlined onClick={() => setDrawerOpen(false)} /> */}
             </div>
           }
@@ -205,30 +205,9 @@ export default function Navbar() {
                 } text-base   transition-all`}
                 onClick={() => setDrawerOpen(false)}
               >
-                {item.label}
+                {t(item.labelKey)}
               </Link>
             ))}
-
-            {/* Language Selector Inside Drawer */}
-            <div className="mt-6">
-              <p className="text-sm text-gray-400 mb-2">Language</p>
-              <Dropdown
-                trigger={["click"]}
-                popupRender={() => (
-                  <LanguagePanel selected={language} onSelect={setLanguage} />
-                )}
-              >
-                <Button type="text" className="flex gap-2 items-center px-0">
-                  <img
-                    src={currentLang.flag}
-                    alt={`${currentLang.label} flag`}
-                    className="h-5 w-7 rounded-sm object-cover"
-                  />
-                  <span className="text-white">{currentLang.label}</span>
-                  <DownOutlined className="text-white! mt-1" />
-                </Button>
-              </Dropdown>
-            </div>
 
             {/* Download Button */}
             <button className="bg-[#00BCD1] text-white px-6 py-2 rounded-full transition-colors text-sm w-full">

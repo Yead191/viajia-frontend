@@ -1,24 +1,29 @@
+"use client";
 import { spirax } from "@/constants/spirax";
 import Image from "next/image";
+import { Trans, useTranslation } from "react-i18next";
 import { FaAppStoreIos, FaGooglePlay } from "react-icons/fa";
 
 export function ViajiaSpecialty() {
+  const { t } = useTranslation();
   return (
     <section className="py-8 md:py-24 px-4 md:px-5 container mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center justify-center">
         {/* Left Content */}
         <div className="flex flex-col justify-center">
           <h2 className="section-title text-white max-w-[600px]">
-            What Makes{" "}
-            <span className={`${spirax.className} text-primary`}>VIAJIA</span>{" "}
-            Special?
+            <Trans
+              i18nKey="viajiaSpecialty.heading"
+              components={{
+                highlight: (
+                  <span className={`${spirax.className} text-primary`} />
+                ),
+              }}
+            />
           </h2>
 
           <p className="section-subtitle mb-8">
-            Viajia's specialty is understanding you. Our Al combines flights,
-            hotels, and experiences into one personalized itinerary that
-            perfectly fits your style and budget. Everything you need for your
-            trip, all in one place.
+            {t("viajiaSpecialty.subtitle")}
           </p>
 
           {/* App Store Buttons */}
@@ -31,7 +36,9 @@ export function ViajiaSpecialty() {
             >
               <FaGooglePlay className="text-xl" />
 
-              <span className="text-white font-medium">Google Play</span>
+              <span className="text-white font-medium">
+                {t("viajiaSpecialty.googlePlay")}
+              </span>
             </a>
 
             <a

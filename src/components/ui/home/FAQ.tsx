@@ -2,19 +2,23 @@
 
 import { spirax } from "@/constants/spirax";
 import { Collapse, ConfigProvider } from "antd";
-import { BiPlus } from "react-icons/bi";
+import { useTranslation } from "react-i18next";
 
 export default function FAQSection({ faq }: { faq?: any }) {
+  const { t } = useTranslation();
   const items = faq?.map((item: any, index: number) => ({
     key: String(index + 1),
     label: item.question,
     children: item.answer,
   }));
+  const Faq = t("faq", { returnObjects: true });
 
   return (
     <div className="max-w-6xl mx-auto px-4 md:px-4 pb-8 lg:py-12">
       <h2 className="section-title text-center mb-12!">
-        <span className="text-white">Frequently Asked </span>
+        <span className="text-white">
+          {t("faqTitle.part1", "Frequently Asked")}{" "}
+        </span>
         <span className={`${spirax.className} text-primary`}>Questions</span>
       </h2>
       <ConfigProvider
