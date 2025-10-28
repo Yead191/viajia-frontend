@@ -4,7 +4,7 @@ import { FaAppStoreIos, FaGooglePlay } from "react-icons/fa";
 
 export function ViajiaSpecialty() {
   return (
-    <section className="py-16 md:py-24 px-4 md:px-5 container mx-auto">
+    <section className="py-8 md:py-24 px-4 md:px-5 container mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center justify-center">
         {/* Left Content */}
         <div className="flex flex-col justify-center">
@@ -56,7 +56,7 @@ export function ViajiaSpecialty() {
             width={1000}
             height={1000}
             unoptimized
-            className="w-full lg:w-[90%] h-[600px] object-fit"
+            className="w-full lg:w-[90%] h-full lg:h-[600px] object-fit"
           />
         </div>
       </div>

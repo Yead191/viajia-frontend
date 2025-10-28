@@ -4,8 +4,8 @@ import { FaAppStoreIos, FaGooglePlay } from "react-icons/fa";
 
 export function MarketingSection() {
   return (
-    <section className="py-16 md:py-24 px-4 md:px-5 container mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center justify-center">
+    <section className="py-8 md:py-24 px-4 md:px-5 container mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center justify-center">
         {/* Left Content */}
         <div className="flex flex-col justify-center">
           <p className="section-subtitle mb-8">

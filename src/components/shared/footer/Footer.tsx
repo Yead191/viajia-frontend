@@ -12,11 +12,11 @@ export default function Footer() {
   ];
   return (
     <footer
-      style={{
-        backgroundImage: "url('/assets/footer/footer-bg.svg')",
-        backgroundRepeat: "no-repeat",
-      }}
-      className="bg-[#00BCD1] text-black py-20 px-6 md:px-16 font-sans"
+      // style={{
+      //   backgroundImage: "url('/assets/footer/footer-bg.svg')",
+      //   backgroundRepeat: "no-repeat",
+      // }}
+      className="bg-[#00BCD1] text-black pt-20 px-6 md:px-16 font-sans"
     >
       <div className="container mx-auto flex flex-col gap-10">
         {/* Top box with glass effect */}
@@ -65,7 +65,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom copyright */}
-        <div className="text-center md:text-left text-sm text-black/70 border-t border-white/30 pt-4">
+        <div className="text-center md:text-left text-sm text-black/70 border-t border-white/30 py-4">
           ©2025 Viajia. All rights reserved.
         </div>
       </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function WhyChooseUs() {
   return (
-    <section className=" py-16 md:py-24 px-4 md:px-5 container mx-auto">
+    <section className=" pb-8 md:pb-24 px-4 md:px-5 container mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left: Circular Image */}
         <div className="flex justify-center md:justify-start">
