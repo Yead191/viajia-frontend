@@ -21,7 +21,7 @@ export default function TravelCTA() {
 
         {/* Main Heading */}
         <div className="space-y-4">
-          <h1 className="text-5xl md:text-6xl font-semibold bg-linear-to-r from-[#F1F1F1] via-[#00BCD1] to-[#F1F1F1] bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl font-semibold bg-linear-to-r from-[#F1F1F1] via-[#00BCD1] to-[#F1F1F1] bg-clip-text text-transparent">
             Ready to Transform Your Travel?
           </h1>
 
