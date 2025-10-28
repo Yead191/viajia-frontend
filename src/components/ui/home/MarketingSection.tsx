@@ -1,17 +1,19 @@
 import { spirax } from "@/constants/spirax";
+import { getTranslate } from "@/lib/helpers/getTranslate";
 import Image from "next/image";
 import { FaAppStoreIos, FaGooglePlay } from "react-icons/fa";
 
-export function MarketingSection() {
+export async function MarketingSection() {
+  const translateData:any =await getTranslate("marketing")
+  console.log(translateData);
+  
   return (
     <section className="py-8 md:py-24 px-4 md:px-5 container mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center justify-center">
         {/* Left Content */}
         <div className="flex flex-col justify-center">
           <p className="section-subtitle mb-8">
-            Explore unforgettable vacations around the world designed to make
-            your travel experience enjoyable, exciting, and truly memorable with
-            comfort, adventure, and exceptional service everywhere you go.
+            {translateData.description}
           </p>
 
           {/* App Store Buttons */}

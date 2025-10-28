@@ -65,5 +65,15 @@
       "question": "What is the process of date change/reissue of the ticket for a child who will be crossing the child age to adult?",
       "answer": "You can request a date change or ticket reissue for a child crossing to adult through the platform. Policies vary by airline and fare type."
     }
-  ]
+  ],
+  "marketing": {
+    "title": "Your Journey, <span class='text-primary'>Upgraded</span>",
+    "description": "Explore unforgettable vacations around the world designed to make your travel experience enjoyable, exciting, and truly memorable with comfort, adventure, and exceptional service everywhere you go.",
+    "googlePlay": "Google Play",
+    "appStore": "App Store"
+  },
+  "faqTitle": {
+    "part1": "Frequently Asked",
+    "part2": "Questions"
+  }
 }

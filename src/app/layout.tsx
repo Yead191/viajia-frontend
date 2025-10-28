@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { Toaster } from "sonner";
+import AntProvider from "@/lib/provider/AntProvider";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -23,13 +23,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${poppins.variable}  antialiased`}>
-        <AntdRegistry>
+    <AntProvider>
+      <html lang="en">
+        <body className={`${poppins.variable}  antialiased`}>
           <Toaster position="top-center" duration={2000} />
           {children}
-        </AntdRegistry>
-      </body>
-    </html>
+        </body>
+      </html>
+    </AntProvider>
   );
 }

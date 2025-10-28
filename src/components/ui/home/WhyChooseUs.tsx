@@ -1,17 +1,11 @@
-"use client";
-import { Trans, useTranslation } from "react-i18next";
 import { spirax } from "@/constants/spirax";
-import { FEATURES } from "@/constants/features"; // icons
 import Image from "next/image";
+import { getTranslate } from "@/lib/helpers/getTranslate";
+import { FEATURES } from "@/constants/features";
 
-export function WhyChooseUs() {
-  const { t } = useTranslation();
-
-  // Load translated features
-  const features = t("whyChooseUs.features", { returnObjects: true }) as Array<{
-    title: string;
-    description: string;
-  }>;
+export async function WhyChooseUs() {
+  const whyChooseUs: any = await getTranslate("whyChooseUs");
+  const features = whyChooseUs?.features;
 
   return (
     <section className="pb-8 md:pb-24 px-4 md:px-5 container mx-auto">
@@ -27,7 +21,7 @@ export function WhyChooseUs() {
             >
               <Image
                 src="https://i.ibb.co.com/m5sxHY0p/73835371421e1be97f4fbe07e4a986a2e4390c9c.jpg"
-                alt={t("whyChooseUs.heading")}
+                alt={whyChooseUs.heading}
                 width={400}
                 height={400}
                 className="rounded-full w-full h-full object-cover"
@@ -40,26 +34,25 @@ export function WhyChooseUs() {
         <div className="space-y-8">
           {/* Heading */}
           <div>
-            <h2 className="section-title">
-              <Trans
-                i18nKey="whyChooseUs.heading"
-                components={{
-                  highlight: (
-                    <span className={`text-primary ${spirax.className}`} />
-                  ),
-                }}
-              />
-            </h2>
-            <p className="section-subtitle">{t("whyChooseUs.subtitle")}</p>
+            <h2
+              className="section-title"
+              dangerouslySetInnerHTML={{
+                __html: whyChooseUs.heading.replace(
+                  /<highlight>(.*?)<\/highlight>/g,
+                  `<span class="${spirax.className} text-primary">$1</span>`
+                ),
+              }}
+            ></h2>
+            <p className="section-subtitle">{whyChooseUs.subtitle}</p>
           </div>
 
           {/* Features */}
           <div className="space-y-4">
-            {features.map((feature, index) => (
+            {features.map((feature: any, index: number) => (
               <div
                 key={index}
                 className={`${
-                  index === 0 ? "bg-[#1C1C1E] rounded-xl shadow-2xl " : ""
+                  index === 0 ? "bg-[#1C1C1E] rounded-xl shadow-2xl" : ""
                 } p-4 flex gap-4`}
               >
                 <div

@@ -1,11 +1,9 @@
-"use client";
 import Image from "next/image";
 import { Button } from "antd";
 import { PHOTO_CARDS } from "@/constants/photoCard";
-import { Trans, useTranslation } from "react-i18next";
+import { spirax } from "@/constants/spirax";
 
-export default function Banner() {
-  const { t } = useTranslation();
+export default function Banner({ translateData }: any) {
   return (
     <section
       id="banner"
@@ -49,41 +47,47 @@ export default function Banner() {
 
       {/* Heading */}
       <div className="relative z-10 max-w-4xl mx-auto mb-6">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-          <Trans
-            i18nKey="banner.heading"
-            components={{ highlight: <span className="text-primary" /> }}
-          />
-        </h1>
+        <h1
+          className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight"
+          dangerouslySetInnerHTML={{
+            __html: translateData.heading.replace(
+              /<highlight>(.*?)<\/highlight>/g,
+              `<span class="${spirax.className} text-primary">$1</span>`
+            ),
+          }}
+        ></h1>
       </div>
 
       {/* Description */}
       <div className="relative z-10 max-w-2xl mx-auto mb-10 space-y-3 text-slate-300">
-        <p className="text-base sm:text-lg">
-          <Trans
-            i18nKey="banner.description1"
-            components={{ highlight: <span className="text-primary" /> }}
-          />
-        </p>
+        <p
+          className="text-base sm:text-lg"
+          dangerouslySetInnerHTML={{
+            __html: translateData.description1.replace(
+              /<highlight>(.*?)<\/highlight>/g,
+              `<span class="${spirax.className} font-semibold text-primary">$1</span>`
+            ),
+          }}
+        ></p>
         <p className="text-sm sm:text-base text-slate-400">
-          {t("banner.description2")}
+          {translateData?.description2}
         </p>
       </div>
 
       {/* CTA Buttons */}
-      <div className="relative z-10 flex flex-col sm:flex-row gap-4 justify-center">
+      <div className="relative z-10 flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center w-full">
         <Button
           size="large"
-          className="bg-[#FFCB20]! hover:bg-yellow-500! border-none! text-slate-900! font-semibold!  h-12! rounded-xl"
+          className="bg-[#FFCB20]! hover:bg-yellow-500! border-none! text-slate-900! font-semibold!  h-12! rounded-xl w-full! md:w-[220px]!"
         >
-          {t("banner.cta.talkToValeria")}
+          {translateData.cta.talkToValeria}
         </Button>
         <Button
           size="large"
           type="default"
-          className="border! border-primary! text-primary! hover:bg-cyan-400/10 font-semibold! h-12! rounded-xl bg-[#00BCD126]!"
+          className="border! border-primary! text-primary! hover:bg-cyan-400/10 font-semibold! h-12! rounded-xl bg-[#00BCD126]! w-full! md:w-[220px]!"
         >
-          {t("banner.cta.createItinerary")}
+          {translateData?.cta.createItinerary}
         </Button>
       </div>
     </section>

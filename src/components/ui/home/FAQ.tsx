@@ -1,26 +1,17 @@
 "use client";
-
 import { spirax } from "@/constants/spirax";
 import { Collapse, ConfigProvider } from "antd";
-import { useTranslation } from "react-i18next";
 
-export default function FAQSection({ faq }: { faq?: any }) {
-  const { t } = useTranslation();
-  const items = faq?.map((item: any, index: number) => ({
-    key: String(index + 1),
-    label: item.question,
-    children: item.answer,
-  }));
-  const Faq = t("faq", { returnObjects: true });
-
+export default function FAQSection({ items, faqTitle }: any) {
   return (
     <div className="max-w-6xl mx-auto px-4 md:px-4 pb-8 lg:py-12">
-      <h2 className="section-title text-center mb-12!">
-        <span className="text-white">
-          {t("faqTitle.part1", "Frequently Asked")}{" "}
+      <h2 className="section-title text-center mb-12">
+        <span className="text-white">{faqTitle.part1} </span>
+        <span className={`${spirax.className} text-primary font-bold`}>
+          {faqTitle.part2}
         </span>
-        <span className={`${spirax.className} text-primary`}>Questions</span>
       </h2>
+
       <ConfigProvider
         theme={{
           components: {
@@ -32,12 +23,10 @@ export default function FAQSection({ faq }: { faq?: any }) {
       >
         <Collapse
           items={items}
-          defaultActiveKey={["2"]}
+          defaultActiveKey={["1"]}
           ghost
           expandIconPosition="end"
-          style={{
-            backgroundColor: "transparent",
-          }}
+          style={{ backgroundColor: "transparent" }}
           size="large"
           className="custom-faq-collapse"
         />
@@ -72,17 +61,6 @@ export default function FAQSection({ faq }: { faq?: any }) {
         .custom-faq-collapse .ant-collapse-expand-icon {
           color: rgba(255, 255, 255, 0.9) !important;
           font-size: 14px !important;
-        }
-
-        .custom-faq-collapse .ant-collapse-item:hover {
-          background-color: #1c1c1e !important;
-        }
-
-        .custom-faq-collapse .ant-collapse-item-active {
-          background-color: #1c1c1e !important;
-        }
-        .ant-collapse-content-box {
-          background-color: #1c1c1e !important;
         }
       `}</style>
     </div>

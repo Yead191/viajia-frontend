@@ -64,5 +64,15 @@
       "question": "¿Cuál es el proceso de cambio/reemisión de la fecha del ticket para un niño que pasará de niño a adulto?",
       "answer": "Puedes solicitar un cambio de fecha o reemisión del ticket para un niño que pasa a adulto a través de la plataforma. Las políticas varían según la aerolínea y el tipo de tarifa."
     }
-  ]
+  ],
+  "marketing": {
+    "title": "Tu Viaje, <span class='text-primary'>Mejorado</span>",
+    "description": "Explora vacaciones inolvidables en todo el mundo diseñadas para hacer que tu experiencia de viaje sea placentera, emocionante y realmente memorable con comodidad, aventura y un servicio excepcional dondequiera que vayas.",
+    "googlePlay": "Google Play",
+    "appStore": "App Store"
+  },
+  "faqTitle": {
+    "part1": "Preguntas Frecuentes",
+    "part2": "Preguntas"
+  }
 }

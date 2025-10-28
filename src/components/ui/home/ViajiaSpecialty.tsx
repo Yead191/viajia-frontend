@@ -1,29 +1,29 @@
-"use client";
 import { spirax } from "@/constants/spirax";
+import { getTranslate } from "@/lib/helpers/getTranslate";
 import Image from "next/image";
-import { Trans, useTranslation } from "react-i18next";
 import { FaAppStoreIos, FaGooglePlay } from "react-icons/fa";
 
-export function ViajiaSpecialty() {
-  const { t } = useTranslation();
+export async function ViajiaSpecialty() {
+  const translateData: any = await getTranslate("viajiaSpecialty");
+  console.log(translateData);
   return (
     <section className="py-8 md:py-24 px-4 md:px-5 container mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center justify-center">
         {/* Left Content */}
         <div className="flex flex-col justify-center">
-          <h2 className="section-title text-white max-w-[600px]">
-            <Trans
-              i18nKey="viajiaSpecialty.heading"
-              components={{
-                highlight: (
-                  <span className={`${spirax.className} text-primary`} />
-                ),
-              }}
-            />
-          </h2>
+          <h2
+            className="section-title text-white max-w-[600px]"
+            dangerouslySetInnerHTML={{
+              __html: translateData.heading.replace(
+                /<highlight>(.*?)<\/highlight>/g,
+                `<span class="${spirax.className} text-primary">$1</span>`
+              ),
+            }}
+          ></h2>
 
           <p className="section-subtitle mb-8">
-            {t("viajiaSpecialty.subtitle")}
+            {/* {t("viajiaSpecialty.subtitle")} */}
+            {translateData.subtitle}
           </p>
 
           {/* App Store Buttons */}
@@ -36,9 +36,7 @@ export function ViajiaSpecialty() {
             >
               <FaGooglePlay className="text-xl" />
 
-              <span className="text-white font-medium">
-                {t("viajiaSpecialty.googlePlay")}
-              </span>
+              <span className="text-white font-medium">Google Play</span>
             </a>
 
             <a

@@ -6,14 +6,25 @@ import FAQSection from "./FAQ";
 import { faq } from "@/constants/faqData";
 import { MarketingSection } from "./MarketingSection";
 import TravelCTA from "./TravelCTA";
+import { getTranslate } from "@/lib/helpers/getTranslate";
 
-export default function HomePageMain() {
+export default async function HomePageMain() {
+  // const translateData: any = await getTranslate("viajiaSpecialty");
+  // console.log(translateData);
+  const faqData: any = await getTranslate("faq");
+const faqTitle: any = await getTranslate("faqTitle");
+  const items = faqData.map((item: any, index: number) => ({
+    key: String(index + 1),
+    label: item.question,
+    children: <p>{item.answer}</p>,
+  }));
+
   return (
     <section>
-      <Banner />
+      <Banner translateData={await getTranslate("banner")} />
       <WhyChooseUs />
       <ViajiaSpecialty />
-      <FAQSection faq={faq} />
+      <FAQSection items={items} faqTitle={faqTitle} />
       <MarketingSection />
       <TravelCTA />
     </section>

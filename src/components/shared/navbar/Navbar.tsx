@@ -7,13 +7,19 @@ import Link from "next/link";
 import { Button, Dropdown, Drawer, ConfigProvider } from "antd";
 import LanguagePanel from "./LanguagePanel";
 import { LANGUAGES } from "@/constants/language";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
-
+import Cookies from "js-cookie";
+import { getTranslate } from "@/lib/helpers/getTranslate";
 export default function Navbar() {
   const pathname = usePathname();
   const { t, i18n } = useTranslation();
-  const [language, setLanguage] = useState<"en" | "es">("en");
+  const cookieLang = Cookies.get("lang");
+  const [language, setLanguage] = useState<"en" | "es">(
+    (cookieLang as any) || "en"
+  );
+
+  const router = useRouter()
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const currentLang = useMemo(
@@ -59,13 +65,16 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [cookieLang]);
 
   // handle language change
-  const handleLanguageChange = (lang: "en" | "es") => {
+  const handleLanguageChange = async (lang: "en" | "es") => {
     console.log(lang);
     setLanguage(lang);
     i18n.changeLanguage(lang);
+    Cookies.set("lang", lang);
+    router.refresh()
+    // globalThis.location.reload();
   };
 
   return (
