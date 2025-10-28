@@ -1,0 +1,31 @@
+{
+  "banner": {
+    "heading": "Tu <highlight>viaje</highlight> perfecto, diseñado por inteligencia artificial",
+    "highlight": "viaje, ",
+    "description1": "<highlight>Viajia</highlight> — crea itinerarios personalizados en tiempo real según tus preferencias, presupuesto y estilo de viaje. Desde vuelos y hoteles hasta experiencias únicas, todo en un solo lugar.",
+    "desHighlight": "Viajia",
+    "description2": "Desde vuelos hasta hoteles, actividades y gastronomía — tu viaje perfecto comienza con una conversación.",
+    "cta": {
+      "talkToValeria": "✨ Habla con Valeria",
+      "createItinerary": "Crear mi Itinerario AI"
+    }
+  },
+  "whyChooseUs": {
+    "heading": "Por Qué <highlight>Elegirnos</highlight>",
+    "subtitle": "En Viajia, creemos que viajar debe ser tan sencillo como soñar con tu destino. Nuestra IA analiza tus preferencias para crear itinerarios únicos combinando comodidad, inspiración y total personalización.",
+    "features": [
+      {
+        "title": "Vuelos Inteligentes",
+        "description": "Mejores combinaciones y precios en tiempo real."
+      },
+      {
+        "title": "Hoteles Personalizados",
+        "description": "Adaptados a tu estilo, presupuesto y ubicación ideal."
+      },
+      {
+        "title": "Experiencias Únicas",
+        "description": "Restaurantes y actividades seleccionados que coinciden con tus gustos."
+      }
+    ]
+  }
+}

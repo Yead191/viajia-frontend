@@ -8,9 +8,11 @@ import { Button, Dropdown, Drawer, ConfigProvider } from "antd";
 import LanguagePanel from "./LanguagePanel";
 import { LANGUAGES } from "@/constants/language";
 import { usePathname } from "next/navigation";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
   const pathname = usePathname();
+  const { i18n } = useTranslation();
   const [language, setLanguage] = useState<"en" | "es">("en");
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -58,6 +60,13 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // handle language change
+  const handleLanguageChange = (lang: "en" | "es") => {
+    console.log(lang);
+    setLanguage(lang);
+    i18n.changeLanguage(lang);
+  };
 
   return (
     <nav
@@ -118,7 +127,10 @@ export default function Navbar() {
             <Dropdown
               trigger={["click"]}
               popupRender={() => (
-                <LanguagePanel selected={language} onSelect={setLanguage} />
+                <LanguagePanel
+                  selected={language}
+                  onSelect={handleLanguageChange}
+                />
               )}
             >
               <Button type="text" className="flex gap-2 rounded-xl px-3 py-2">

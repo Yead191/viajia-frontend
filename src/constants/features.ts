@@ -1,21 +1,18 @@
 const FEATURES = [
   {
     icon: "✈️",
-    title: "Smart Flight Booking",
-    description:
-      "AI-powered flight recommendations with best prices and convenient schedules.",
+    title: "Smart Flights",
+    description: "Best combinations and real-time prices.",
   },
   {
     icon: "🏢",
-    title: "Accommodation",
-    description:
-      "Handpicked hotels and stays that match your style and preferences.",
+    title: "Personalized Hotels",
+    description: "Tailored to your style, budget, and ideal location.",
   },
   {
     icon: "🍽️",
-    title: "Dining Experiences",
-    description:
-      "Curated restaurant recommendations from local gems to fine dining.",
+    title: "Unique Experiences",
+    description: "Curated restaurants and activities that match your tastes.",
   },
 ];
 

@@ -8,18 +8,17 @@ export function ViajiaSpecialty() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center justify-center">
         {/* Left Content */}
         <div className="flex flex-col justify-center">
-          <h2 className="section-title">
-            <span className="text-white">What is the specialty of</span>
-            <br />
-            <span className={`${spirax.className} text-primary`}>VIAJIA?</span>
+          <h2 className="section-title text-white max-w-[600px]">
+            What Makes{" "}
+            <span className={`${spirax.className} text-primary`}>VIAJIA</span>{" "}
+            Special?
           </h2>
 
           <p className="section-subtitle mb-8">
-            Through VIAJIA's AI-powered interaction users can seamlessly
-            interact with VIAJIA to access flight price & booking information,
-            hotel price comparisons, restaurant locations and prices, as well as
-            the best deals for transportation bookings including bus and train
-            services – all conveniently collected in one place through VIAJIA.
+            Viajia's specialty is understanding you. Our Al combines flights,
+            hotels, and experiences into one personalized itinerary that
+            perfectly fits your style and budget. Everything you need for your
+            trip, all in one place.
           </p>
 
           {/* App Store Buttons */}

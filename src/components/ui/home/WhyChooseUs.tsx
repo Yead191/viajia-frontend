@@ -1,10 +1,20 @@
-import { FEATURES } from "@/constants/features";
+"use client";
+import { Trans, useTranslation } from "react-i18next";
 import { spirax } from "@/constants/spirax";
+import { FEATURES } from "@/constants/features"; // icons
 import Image from "next/image";
 
 export function WhyChooseUs() {
+  const { t } = useTranslation();
+
+  // Load translated features
+  const features = t("whyChooseUs.features", { returnObjects: true }) as Array<{
+    title: string;
+    description: string;
+  }>;
+
   return (
-    <section className=" pb-8 md:pb-24 px-4 md:px-5 container mx-auto">
+    <section className="pb-8 md:pb-24 px-4 md:px-5 container mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left: Circular Image */}
         <div className="flex justify-center md:justify-start">
@@ -17,7 +27,7 @@ export function WhyChooseUs() {
             >
               <Image
                 src="https://i.ibb.co.com/m5sxHY0p/73835371421e1be97f4fbe07e4a986a2e4390c9c.jpg"
-                alt="Travel experience"
+                alt={t("whyChooseUs.heading")}
                 width={400}
                 height={400}
                 className="rounded-full w-full h-full object-cover"
@@ -30,21 +40,22 @@ export function WhyChooseUs() {
         <div className="space-y-8">
           {/* Heading */}
           <div>
-            <h2 className="section-title ">
-              Why{" "}
-              <span className={`text-primary ${spirax.className}`}>
-                Choose Us
-              </span>
+            <h2 className="section-title">
+              <Trans
+                i18nKey="whyChooseUs.heading"
+                components={{
+                  highlight: (
+                    <span className={`text-primary ${spirax.className}`} />
+                  ),
+                }}
+              />
             </h2>
-            <p className="section-subtitle">
-              Enjoy different experiences in every place you visit and discover
-              new and affordable adventures of course.
-            </p>
+            <p className="section-subtitle">{t("whyChooseUs.subtitle")}</p>
           </div>
 
           {/* Features */}
           <div className="space-y-4">
-            {FEATURES?.map((feature, index) => (
+            {features.map((feature, index) => (
               <div
                 key={index}
                 className={`${
@@ -53,10 +64,10 @@ export function WhyChooseUs() {
               >
                 <div
                   className={`text-3xl shrink-0 flex items-center justify-center h-full ${
-                    index === 0 ? "bg-[#0A0B0D] " : "bg-[#1C1C1E]"
-                  }  p-3 rounded-2xl `}
+                    index === 0 ? "bg-[#0A0B0D]" : "bg-[#1C1C1E]"
+                  } p-3 rounded-2xl`}
                 >
-                  {feature.icon}
+                  {FEATURES[index]?.icon}
                 </div>
                 <div>
                   <h3 className="text-white font-semibold mb-1">

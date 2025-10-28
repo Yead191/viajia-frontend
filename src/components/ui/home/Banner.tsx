@@ -2,10 +2,15 @@
 import Image from "next/image";
 import { Button } from "antd";
 import { PHOTO_CARDS } from "@/constants/photoCard";
+import { Trans, useTranslation } from "react-i18next";
 
 export default function Banner() {
+  const { t } = useTranslation();
   return (
-    <section id="banner" className="relative min-h-[calc(100vh-24px)] bg-linear-to-b from-[#00BCD11F] via-[#00BCD100] to-[#0a0b0d] overflow-hidden flex flex-col items-center justify-center text-center px-4 py-20 mx-2 lg:mx-6 rounded-t-3xl mt-6 ">
+    <section
+      id="banner"
+      className="relative min-h-[calc(100vh-24px)] bg-linear-to-b from-[#00BCD11F] via-[#00BCD100] to-[#0a0b0d] overflow-hidden flex flex-col items-center justify-center text-center px-4 py-20 mx-2 lg:mx-6 rounded-t-3xl mt-6 "
+    >
       {/* Background Accent */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl" />
@@ -45,22 +50,23 @@ export default function Banner() {
       {/* Heading */}
       <div className="relative z-10 max-w-4xl mx-auto mb-6">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-          Organize your <span className="text-primary">entire trip</span>
-          <br />
-          in a single app
+          <Trans
+            i18nKey="banner.heading"
+            components={{ highlight: <span className="text-primary" /> }}
+          />
         </h1>
       </div>
 
       {/* Description */}
       <div className="relative z-10 max-w-2xl mx-auto mb-10 space-y-3 text-slate-300">
         <p className="text-base sm:text-lg">
-          Meet <span className="text-primary font-semibold">Valeria</span> —
-          your intelligent AI companion that designs complete, real-time
-          itineraries perfectly tailored to you.
+          <Trans
+            i18nKey="banner.description1"
+            components={{ highlight: <span className="text-primary" /> }}
+          />
         </p>
         <p className="text-sm sm:text-base text-slate-400">
-          From flights to hotels, activities to dining — your perfect journey
-          starts with a conversation.
+          {t("banner.description2")}
         </p>
       </div>
 
@@ -70,14 +76,14 @@ export default function Banner() {
           size="large"
           className="bg-[#FFCB20]! hover:bg-yellow-500! border-none! text-slate-900! font-semibold!  h-12! rounded-xl"
         >
-          ✨ Talk to Valeria
+          {t("banner.cta.talkToValeria")}
         </Button>
         <Button
           size="large"
           type="default"
           className="border! border-primary! text-primary! hover:bg-cyan-400/10 font-semibold! h-12! rounded-xl bg-[#00BCD126]!"
         >
-          Create your AI-powered trip now
+          {t("banner.cta.createItinerary")}
         </Button>
       </div>
     </section>

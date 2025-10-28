@@ -14,7 +14,7 @@ export default function LanguagePanel({
       style={{ boxShadow: "0 10px 30px rgba(0,0,0,0.08)" }}
     >
       <div className="flex flex-col gap-3">
-        {LANGUAGES.map((lang: any) => {
+        {LANGUAGES?.map((lang: any) => {
           const active = selected === lang.key;
           return (
             <button
