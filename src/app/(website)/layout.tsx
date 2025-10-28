@@ -1,12 +1,16 @@
+import Footer from "@/components/shared/footer/Footer";
 import Navbar from "@/components/shared/navbar/Navbar";
 import React from "react";
 
 export default function layout({ children }: { children: React.ReactNode }) {
   return (
     <main className="relative">
-        <Navbar />
-      
+      <Navbar />
+
       <section>{children}</section>
+      <footer>
+        <Footer />
+      </footer>
     </main>
   );
 }

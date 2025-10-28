@@ -96,6 +96,16 @@ export default function Navbar() {
                     ? "relative font-semibold px-8 py-2 rounded-full text-white bg-[#00BCD1]/20 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.1)]"
                     : "text-slate-300 hover:text-cyan-400"
                 }`}
+                style={{
+                  backdropFilter:
+                    item.href === pathname
+                      ? "blur(10px) saturate(120%)"
+                      : "none",
+                  WebkitBackdropFilter:
+                    item.href === pathname
+                      ? "blur(10px) saturate(120%)"
+                      : "none",
+                }}
               >
                 {item.label}
               </Link>
