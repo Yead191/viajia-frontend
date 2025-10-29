@@ -1,14 +1,16 @@
+import { getTranslate } from "@/lib/helpers/getTranslate";
 import { Button } from "antd";
 
 import Link from "next/link";
 import { FaAppStoreIos, FaGooglePlay } from "react-icons/fa";
 
-export default function Footer() {
+export default async function Footer() {
+  const translateData: any = await getTranslate("footer");
   const links = [
-    { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
-    { label: "Privacy Policy", href: "/privacy-policy" },
-    { label: "Terms of Use", href: "/terms-condition" },
+    { label: translateData.links.about, href: "/about" },
+    { label: translateData.links.contact, href: "/contact" },
+    { label: translateData.links.privacy, href: "/privacy-policy" },
+    { label: translateData.links.terms, href: "/terms-condition" },
   ];
   return (
     <footer
@@ -22,8 +24,7 @@ export default function Footer() {
         {/* Top box with glass effect */}
         <div className="backdrop-blur-md bg-white/10 border border-[#00BCD133] rounded-lg p-6 md:p-10 shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
           <p className="text-lg md:text-xl font-medium text-[#1A1B1B] text-center md:text-left">
-            Your personal AI-powered travel assistant. Making travel planning
-            fast, intuitive, and inspiring.
+            {translateData.description}
           </p>
         </div>
 
@@ -35,7 +36,7 @@ export default function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="hover:text-black font-medium"
+                className="hover:text-black font-medium text-sm"
               >
                 {link.label}
               </Link>
@@ -45,20 +46,20 @@ export default function Footer() {
           {/* Right section - App buttons */}
           <div className="flex flex-col items-center md:items-end gap-3">
             <span className="text-lg text-black/80 font-medium">
-              Get the App
+              {translateData.getApp}
             </span>
             <div className="flex gap-3">
               <Button
                 icon={<FaGooglePlay className="text-xl" />}
                 className="bg-black! text-white! border-none! hover:bg-gray-800! h-12!"
               >
-                Google Play
+                {translateData.googlePlay}
               </Button>
               <Button
                 icon={<FaAppStoreIos className="text-xl" />}
                 className="bg-black! text-white! border-none! hover:bg-gray-800! h-12!"
               >
-                App Store
+                {translateData.appStore}
               </Button>
             </div>
           </div>
@@ -66,7 +67,7 @@ export default function Footer() {
 
         {/* Bottom copyright */}
         <div className="text-center md:text-left text-sm text-black/70 border-t border-white/30 py-4">
-          ©2025 Viajia. All rights reserved.
+          {translateData.copyright}
         </div>
       </div>
     </footer>

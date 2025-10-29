@@ -75,5 +75,27 @@
   "faqTitle": {
     "part1": "Frequently Asked",
     "part2": "Questions"
+  },
+  "travelCTA": {
+    "badge": "Start Your Journey",
+    "heading": "Ready to Transform Your Travel?",
+    "subheading": "Join thousands of travelers who've discovered a smarter, more inspiring way to explore the world with Valeria.",
+    "button1": "Talk to Valeria Now",
+    "button2": "Start Your Journey",
+    "trustLine1": "No credit card required • Free to start • Available 24/7",
+    "trustLine2": "Your personal AI-powered travel assistant. Making travel planning fast, intuitive, and inspiring."
+  },
+  "footer": {
+    "description": "Your personal AI-powered travel assistant. Making travel planning fast, intuitive, and inspiring.",
+    "getApp": "Get the App",
+    "googlePlay": "Google Play",
+    "appStore": "App Store",
+    "copyright": "©2025 Viajia. All rights reserved.",
+    "links": {
+      "about": "About",
+      "contact": "Contact",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use"
+    }
   }
 }

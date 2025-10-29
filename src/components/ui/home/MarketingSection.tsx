@@ -4,20 +4,18 @@ import Image from "next/image";
 import { FaAppStoreIos, FaGooglePlay } from "react-icons/fa";
 
 export async function MarketingSection() {
-  const translateData:any =await getTranslate("marketing")
+  const translateData: any = await getTranslate("marketing");
   console.log(translateData);
-  
+
   return (
     <section className="py-8 md:py-24 px-4 md:px-5 container mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center justify-center">
         {/* Left Content */}
         <div className="flex flex-col justify-center">
-          <p className="section-subtitle mb-8">
-            {translateData.description}
-          </p>
+          <p className="section-subtitle mb-8">{translateData.description}</p>
 
           {/* App Store Buttons */}
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap justify-center items-center lg:justify-start gap-4">
             <a
               href="#"
               target="_blank"

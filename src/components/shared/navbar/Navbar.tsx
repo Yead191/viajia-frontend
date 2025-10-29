@@ -8,18 +8,15 @@ import { Button, Dropdown, Drawer, ConfigProvider } from "antd";
 import LanguagePanel from "./LanguagePanel";
 import { LANGUAGES } from "@/constants/language";
 import { usePathname, useRouter } from "next/navigation";
-import { useTranslation } from "react-i18next";
 import Cookies from "js-cookie";
-import { getTranslate } from "@/lib/helpers/getTranslate";
-export default function Navbar() {
+export default function Navbar({ t }: any) {
   const pathname = usePathname();
-  const { t, i18n } = useTranslation();
   const cookieLang = Cookies.get("lang");
   const [language, setLanguage] = useState<"en" | "es">(
     (cookieLang as any) || "en"
   );
 
-  const router = useRouter()
+  const router = useRouter();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const currentLang = useMemo(
@@ -71,9 +68,9 @@ export default function Navbar() {
   const handleLanguageChange = async (lang: "en" | "es") => {
     console.log(lang);
     setLanguage(lang);
-    i18n.changeLanguage(lang);
+    // i18n.changeLanguage(lang);
     Cookies.set("lang", lang);
-    router.refresh()
+    router.refresh();
     // globalThis.location.reload();
   };
 
@@ -89,7 +86,7 @@ export default function Navbar() {
       `}
     >
       <div
-        className={`container mx-auto px-6 lg:px-9 py-4 transition-colors duration-300`}
+        className={`container mx-auto px-4 py-4 transition-colors duration-300`}
       >
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -125,7 +122,7 @@ export default function Navbar() {
                       : "none",
                 }}
               >
-                {t(item.labelKey)}
+                {t[item.labelKey]}
               </Link>
             ))}
           </div>
@@ -164,7 +161,7 @@ export default function Navbar() {
 
             {/* Mobile Menu Icon */}
             <button
-              className="md:hidden text-white text-2xl"
+              className="md:hidden text-white text-xl"
               onClick={() => setDrawerOpen(true)}
             >
               <MenuOutlined />
@@ -187,7 +184,7 @@ export default function Navbar() {
         <Drawer
           title={
             <div className="flex justify-between items-center">
-              <span className="font-semibold text-lg">{t("nav.menu")}</span>
+              <span className="font-semibold text-lg">{t.menu}</span>
               {/* <CloseOutlined onClick={() => setDrawerOpen(false)} /> */}
             </div>
           }
@@ -214,7 +211,7 @@ export default function Navbar() {
                 } text-base   transition-all`}
                 onClick={() => setDrawerOpen(false)}
               >
-                {t(item.labelKey)}
+                {t[item.labelKey]}
               </Link>
             ))}
 
