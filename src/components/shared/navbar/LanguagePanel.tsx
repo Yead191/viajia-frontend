@@ -10,7 +10,7 @@ export default function LanguagePanel({
 }) {
   return (
     <div
-      className="w-72 rounded-2xl border border-primary p-3 shadow-xl bg-[#0A0B0D]"
+      className="w-56 lg:w-72 rounded-xl border border-primary p-3 shadow-xl bg-[#0A0B0D]"
       style={{ boxShadow: "0 10px 30px rgba(0,0,0,0.08)" }}
     >
       <div className="flex flex-col gap-3">
@@ -20,7 +20,7 @@ export default function LanguagePanel({
             <button
               key={lang.key}
               onClick={() => onSelect(lang.key)}
-              className="flex items-center justify-between rounded-xl  px-3 py-3 "
+              className="flex items-center justify-between rounded-xl  px-3 py-3 hover:bg-[#1c1c1e]"
             >
               <span className="flex items-center gap-3">
                 <span className="inline-flex h-6 w-10 items-center justify-center overflow-hidden rounded-md  ">

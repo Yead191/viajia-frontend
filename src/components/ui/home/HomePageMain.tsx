@@ -1,6 +1,6 @@
 import React from "react";
-import Banner from "./Banner";
-import { WhyChooseUs } from "./WhyChooseUs";
+import Banner from "./banner/Banner";
+import { WhyChooseUs } from "./why-choose-us/WhyChooseUs";
 import { ViajiaSpecialty } from "./ViajiaSpecialty";
 import FAQSection from "./FAQ";
 import { MarketingSection } from "./MarketingSection";
