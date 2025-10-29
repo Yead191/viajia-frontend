@@ -31,12 +31,12 @@ export default async function Footer() {
         {/* Bottom section */}
         <div className="flex flex-col md:flex-row justify-between items-center border-t border-white/30 pt-6">
           {/* Left links */}
-          <div className="flex flex-wrap gap-4 lg:gap-6 text-sm text-black/80 mb-4 md:mb-0">
+          <div className="flex flex-wrap gap-4 lg:gap-6 text-xs lg:text-sm text-black/80 mb-4 md:mb-0">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="hover:text-black font-medium text-sm"
+                className="hover:text-black font-medium "
               >
                 {link.label}
               </Link>
