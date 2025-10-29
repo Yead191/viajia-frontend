@@ -5,7 +5,7 @@ import { FaAppStoreIos, FaGooglePlay } from "react-icons/fa";
 
 export async function ViajiaSpecialty() {
   const translateData: any = await getTranslate("viajiaSpecialty");
-  console.log(translateData);
+  // console.log(translateData);
   return (
     <section className="py-8 md:py-24 px-4 md:px-5 container mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center justify-center">

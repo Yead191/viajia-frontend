@@ -5,7 +5,7 @@ import { FaAppStoreIos, FaGooglePlay } from "react-icons/fa";
 
 export async function MarketingSection() {
   const translateData: any = await getTranslate("marketing");
-  console.log(translateData);
+  // console.log(translateData);
 
   return (
     <section className="py-8 md:py-24 px-4 md:px-5 container mx-auto">

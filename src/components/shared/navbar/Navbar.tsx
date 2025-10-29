@@ -66,7 +66,7 @@ export default function Navbar({ t }: any) {
 
   // handle language change
   const handleLanguageChange = async (lang: "en" | "es") => {
-    console.log(lang);
+    // console.log(lang);
     setLanguage(lang);
     // i18n.changeLanguage(lang);
     Cookies.set("lang", lang);
