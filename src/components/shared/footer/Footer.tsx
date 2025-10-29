@@ -18,7 +18,7 @@ export default async function Footer() {
       //   backgroundImage: "url('/assets/footer/footer-bg.svg')",
       //   backgroundRepeat: "no-repeat",
       // }}
-      className="bg-[#00BCD1] text-black pt-20 px-6 md:px-16 font-sans"
+      className="bg-[#00BCD1] text-black pt-12 px-6 md:px-16 font-sans"
     >
       <div className="container mx-auto flex flex-col gap-10">
         {/* Top box with glass effect */}
