@@ -30,8 +30,8 @@ export default function Navbar({ t }: any) {
   useEffect(() => {
     const handleScroll = () => {
       const bannerHeight = document.getElementById("banner")?.offsetHeight || 0;
-      const scrollY = window.scrollY;
-
+      const scrollY = globalThis.scrollY;
+      // console.log("scroll", scrollY);
       // Change navbar background after banner
       setIsScrolled(scrollY > bannerHeight - 80);
 
@@ -47,8 +47,9 @@ export default function Navbar({ t }: any) {
       lastScrollTop.current = scrollY <= 0 ? 0 : scrollY; // avoid negative scroll
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    globalThis.addEventListener("scroll", handleScroll);
+    // console.log("inside");
+    return () => globalThis.removeEventListener("scroll", handleScroll);
   }, []);
   useEffect(() => {
     const handleScroll = () => {

@@ -5,7 +5,7 @@ import { Collapse, ConfigProvider } from "antd";
 export default function FAQSection({ items, faqTitle }: any) {
   return (
     <div className="max-w-6xl mx-auto px-4 md:px-4 pb-8 lg:py-12">
-      <h2 className="section-title text-center mb-12">
+      <h2 className="section-title text-center mb-10!">
         <span className="text-white">{faqTitle.part1} </span>
         <span className={`${spirax.className} text-primary font-bold`}>
           {faqTitle.part2}
