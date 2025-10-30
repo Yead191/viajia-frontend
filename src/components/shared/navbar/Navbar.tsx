@@ -91,7 +91,7 @@ export default function Navbar({ t }: any) {
       >
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="shrink-0">
+          <Link href="/" className="shrink-0">
             <Image
               src="/Logo.svg"
               alt="VIAJIA Logo"
@@ -99,7 +99,7 @@ export default function Navbar({ t }: any) {
               height={40}
               className="h-10 w-auto"
             />
-          </div>
+          </Link>
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
