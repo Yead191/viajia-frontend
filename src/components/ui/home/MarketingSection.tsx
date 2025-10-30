@@ -16,8 +16,7 @@ export async function MarketingSection() {
           {/* App Store Buttons */}
           <div className="flex flex-wrap justify-center items-center lg:justify-start gap-4">
             <a
-          data-aos="fade-right"
-
+              data-aos="zoom-in-up"
               href="#"
               target="_blank"
               rel="noopener noreferrer"
@@ -29,8 +28,7 @@ export async function MarketingSection() {
             </a>
 
             <a
-          data-aos="fade-left"
-
+              data-aos="zoom-in-up"
               href="#"
               target="_blank"
               rel="noopener noreferrer"

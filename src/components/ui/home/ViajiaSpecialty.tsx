@@ -27,9 +27,11 @@ export async function ViajiaSpecialty() {
           </p>
 
           {/* App Store Buttons */}
-          <div className="flex flex-wrap gap-4 justify-center items-center lg:justify-start">
+          <div
+            className="flex flex-wrap gap-4 justify-center items-center lg:justify-start"
+          >
             <a
-          data-aos="fade-right"
+            data-aos="zoom-in-up"
 
               href="#"
               target="_blank"
@@ -42,7 +44,8 @@ export async function ViajiaSpecialty() {
             </a>
 
             <a
-          data-aos="fade-left"
+            data-aos="zoom-in-up"
+
               href="#"
               target="_blank"
               rel="noopener noreferrer"
