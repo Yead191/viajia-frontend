@@ -49,7 +49,7 @@ export async function MarketingSection() {
             width={1100}
             height={1100}
             unoptimized
-            className="w-full  h-full lg:h-fit object-fit mr-3 lg:mr-0"
+            className="w-full h-fit object-fit mr-3 lg:mr-0"
           />
         </div>
       </div>
