@@ -1,4 +1,3 @@
-import { spirax } from "@/constants/spirax";
 import { getTranslate } from "@/lib/helpers/getTranslate";
 import Image from "next/image";
 import { FaAppStoreIos, FaGooglePlay } from "react-icons/fa";
@@ -17,6 +16,8 @@ export async function MarketingSection() {
           {/* App Store Buttons */}
           <div className="flex flex-wrap justify-center items-center lg:justify-start gap-4">
             <a
+          data-aos="fade-right"
+
               href="#"
               target="_blank"
               rel="noopener noreferrer"
@@ -28,6 +29,8 @@ export async function MarketingSection() {
             </a>
 
             <a
+          data-aos="fade-left"
+
               href="#"
               target="_blank"
               rel="noopener noreferrer"

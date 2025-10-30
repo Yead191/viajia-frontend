@@ -1,7 +1,7 @@
-import { spirax } from "@/constants/spirax";
 import { getTranslate } from "@/lib/helpers/getTranslate";
 import FeatureCard from "./FeatureCard";
 import ChooseImg from "./ChooseImg";
+import { roboto } from "@/constants/roboto";
 export async function WhyChooseUs() {
   const whyChooseUs: any = await getTranslate("whyChooseUs");
   const features = whyChooseUs?.features;
@@ -21,7 +21,7 @@ export async function WhyChooseUs() {
               dangerouslySetInnerHTML={{
                 __html: whyChooseUs.heading.replace(
                   /<highlight>(.*?)<\/highlight>/g,
-                  `<span class="${spirax.className} text-primary">$1</span>`
+                  `<span class="${roboto.className} text-primary">$1</span>`
                 ),
               }}
             ></h2>

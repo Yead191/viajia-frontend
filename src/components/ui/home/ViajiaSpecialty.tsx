@@ -1,4 +1,4 @@
-import { spirax } from "@/constants/spirax";
+import { roboto } from "@/constants/roboto";
 import { getTranslate } from "@/lib/helpers/getTranslate";
 import Image from "next/image";
 import { FaAppStoreIos, FaGooglePlay } from "react-icons/fa";
@@ -16,7 +16,7 @@ export async function ViajiaSpecialty() {
             dangerouslySetInnerHTML={{
               __html: translateData.heading.replace(
                 /<highlight>(.*?)<\/highlight>/g,
-                `<span class="${spirax.className} text-primary">$1</span>`
+                `<span class="${roboto.className} text-primary">$1</span>`
               ),
             }}
           ></h2>
@@ -29,6 +29,8 @@ export async function ViajiaSpecialty() {
           {/* App Store Buttons */}
           <div className="flex flex-wrap gap-4 justify-center items-center lg:justify-start">
             <a
+          data-aos="fade-right"
+
               href="#"
               target="_blank"
               rel="noopener noreferrer"
@@ -40,6 +42,7 @@ export async function ViajiaSpecialty() {
             </a>
 
             <a
+          data-aos="fade-left"
               href="#"
               target="_blank"
               rel="noopener noreferrer"

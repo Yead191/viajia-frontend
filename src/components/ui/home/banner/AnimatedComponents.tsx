@@ -1,21 +1,9 @@
-"use client";
-import React, { useEffect } from "react";
 import { PHOTO_CARDS } from "@/constants/photoCard";
 import Image from "next/image";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import { Button } from "antd";
 
 const AnimatedPhotos = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      easing: "ease-in-out",
-    });
-    AOS.refresh();
-  }, []);
-
   return (
     <div className="relative z-10 flex justify-center mb-10 pt-6 lg:pt-0">
       <div className="relative w-60 sm:w-[300px] h-[90px]">
@@ -60,14 +48,6 @@ const AnimatedPhotos = () => {
 
 // cta buttons
 const CTAButtons = ({ translateData }: any) => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      easing: "ease-in-out",
-    });
-    AOS.refresh();
-  }, []);
   return (
     <>
       <div className="relative z-10 flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center w-full">

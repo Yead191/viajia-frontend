@@ -1,14 +1,27 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 export default function ChooseImg({ whyChooseUs }: any) {
-  AOS.init();
+ useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration
+      once: false, 
+      mirror: true,
+    });
 
+    // refresh AOS after images load or DOM changes
+    const handleResize = () => AOS.refresh();
+    globalThis.addEventListener("resize", handleResize);
+
+    return () => {
+      globalThis.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div
-      data-aos="fade-up-right"
+      data-aos="fade-right"
       className="flex justify-center md:justify-start"
     >
       <div className="relative w-80 h-80 md:w-96 md:h-96 2xl:w-[500px] 2xl:h-[500px]">

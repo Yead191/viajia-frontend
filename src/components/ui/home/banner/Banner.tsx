@@ -1,5 +1,5 @@
-import { spirax } from "@/constants/spirax";
 import { AnimatedPhotos, CTAButtons } from "./AnimatedComponents";
+import { roboto } from "@/constants/roboto";
 
 export default function Banner({ translateData }: any) {
   return (
@@ -22,7 +22,7 @@ export default function Banner({ translateData }: any) {
           dangerouslySetInnerHTML={{
             __html: translateData.heading.replace(
               /<highlight>(.*?)<\/highlight>/g,
-              `<span class="${spirax.className} text-primary">$1</span>`
+              `<span class="${roboto.className} text-primary">$1</span>`
             ),
           }}
         ></h1>
@@ -35,7 +35,7 @@ export default function Banner({ translateData }: any) {
           dangerouslySetInnerHTML={{
             __html: translateData.description1.replace(
               /<highlight>(.*?)<\/highlight>/g,
-              `<span class="${spirax.className} font-semibold text-primary">$1</span>`
+              `<span class="${roboto.className} font-semibold text-primary">$1</span>`
             ),
           }}
         ></p>

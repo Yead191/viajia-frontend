@@ -1,11 +1,7 @@
-"use client";
 import { FEATURES } from "@/constants/features";
 import React from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-export default function FeatureCard({ feature, index }: any) {
-  AOS.init();
 
+export default function FeatureCard({ feature, index }: any) {
   return (
     <div
       data-aos="zoom-in-up"

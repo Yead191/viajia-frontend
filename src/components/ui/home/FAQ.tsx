@@ -1,5 +1,5 @@
 "use client";
-import { spirax } from "@/constants/spirax";
+import { roboto } from "@/constants/roboto";
 import { Collapse, ConfigProvider } from "antd";
 
 export default function FAQSection({ items, faqTitle }: any) {
@@ -7,7 +7,7 @@ export default function FAQSection({ items, faqTitle }: any) {
     <div className="max-w-6xl mx-auto px-4 md:px-4 pb-8 lg:py-12">
       <h2 className="section-title text-center mb-10!">
         <span className="text-white">{faqTitle.part1} </span>
-        <span className={`${spirax.className} text-primary font-bold`}>
+        <span className={`${roboto.className} text-primary font-bold`}>
           {faqTitle.part2}
         </span>
       </h2>
