@@ -57,12 +57,12 @@ export async function ViajiaSpecialty() {
         {/* Right - Phone Mockups */}
         <div className=" h-96 md:h-full flex items-center  justify-end">
           <Image
-            src={"/assets/home/phones.svg"}
+            src={"/assets/home/special-img.png"}
             alt="phone"
-            width={1200}
-            height={1200}
+            width={1500}
+            height={1500}
             unoptimized
-            className="w-full lg:w-[90%] h-full lg:h-[600px] object-fit"
+            className="w-full lg:w-[90%] h-fit  object-fit"
           />
         </div>
       </div>

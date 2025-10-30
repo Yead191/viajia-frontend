@@ -39,9 +39,9 @@ export default function Banner({ translateData }: any) {
             ),
           }}
         ></p>
-        <p className="text-sm sm:text-base text-slate-400">
+        {/* <p className="text-sm sm:text-base text-slate-400">
           {translateData?.description2}
-        </p>
+        </p> */}
       </div>
 
       {/* CTA Buttons */}

@@ -52,6 +52,7 @@ const CTAButtons = ({ translateData }: any) => {
     <>
       <div className="relative z-10 flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center w-full">
         <Button
+        style={{ boxShadow: "0 6px 20px rgba(255, 203, 32, 0.5)" }}
           data-aos="fade-up"
           size="large"
           className="bg-[#FFCB20]! hover:bg-yellow-500! border-none! text-slate-900! font-semibold!  h-12! rounded-xl w-full! md:w-[220px]!"
