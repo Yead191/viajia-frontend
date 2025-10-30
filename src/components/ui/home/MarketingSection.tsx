@@ -44,12 +44,12 @@ export async function MarketingSection() {
         {/* Right - Phone Mockups */}
         <div className=" h-96 md:h-full flex items-center  justify-end">
           <Image
-            src={"/assets/home/marketing.svg"}
+            src={"/assets/home/new.svg"}
             alt="phone"
-            width={1000}
-            height={1000}
+            width={1100}
+            height={1100}
             unoptimized
-            className="w-full lg:w-[90%] h-[600px] object-fit"
+            className="w-full  h-full lg:h-[600px] object-fit mr-3 lg:mr-0"
           />
         </div>
       </div>

@@ -27,12 +27,9 @@ export async function ViajiaSpecialty() {
           </p>
 
           {/* App Store Buttons */}
-          <div
-            className="flex flex-wrap gap-4 justify-center items-center lg:justify-start"
-          >
+          <div className="flex flex-wrap gap-4 justify-center items-center lg:justify-start">
             <a
-            data-aos="zoom-in-up"
-
+              data-aos="zoom-in-up"
               href="#"
               target="_blank"
               rel="noopener noreferrer"
@@ -44,8 +41,7 @@ export async function ViajiaSpecialty() {
             </a>
 
             <a
-            data-aos="zoom-in-up"
-
+              data-aos="zoom-in-up"
               href="#"
               target="_blank"
               rel="noopener noreferrer"
@@ -63,8 +59,8 @@ export async function ViajiaSpecialty() {
           <Image
             src={"/assets/home/phones.svg"}
             alt="phone"
-            width={1000}
-            height={1000}
+            width={1200}
+            height={1200}
             unoptimized
             className="w-full lg:w-[90%] h-full lg:h-[600px] object-fit"
           />

@@ -32,10 +32,10 @@ export default function ChooseImg({ whyChooseUs }: any) {
           }}
         >
           <Image
-            src="https://i.ibb.co.com/m5sxHY0p/73835371421e1be97f4fbe07e4a986a2e4390c9c.jpg"
+            src="/assets/home/choose-us-img.svg"
             alt={whyChooseUs.heading}
-            width={400}
-            height={400}
+            width={900}
+            height={900}
             className="rounded-full w-full h-full object-cover"
           />
         </div>

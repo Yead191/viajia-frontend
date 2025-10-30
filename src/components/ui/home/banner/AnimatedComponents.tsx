@@ -56,6 +56,7 @@ const CTAButtons = ({ translateData }: any) => {
           size="large"
           className="bg-[#FFCB20]! hover:bg-yellow-500! border-none! text-slate-900! font-semibold!  h-12! rounded-xl w-full! md:w-[220px]!"
         >
+          <span className="text-black! text-xl">✦</span>{" "}
           {translateData.cta.talkToValeria}
         </Button>
         <Button
