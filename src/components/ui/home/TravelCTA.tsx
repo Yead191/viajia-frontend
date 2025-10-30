@@ -13,7 +13,7 @@ export default async function TravelCTA() {
           <Button
             type="text"
             size="large"
-            className="border-[#FFCB20]! text-[#FFCB20]! hover:text-yellow-400 hover:border-yellow-400 rounded-full! px-6 lg:w-80! font-medium h-auto lg:h-14! bg-[#FFCB20]/15! cursor-auto!"
+            className="border-[#FFCB20]! text-[#FFCB20]! hover:text-yellow-400 hover:border-yellow-400 rounded-full! px-6 lg:px-10! font-medium h-auto lg:h-14! bg-[#FFCB20]/15! cursor-auto!"
             icon={<Sparkles size={16} />}
           >
             {t.badge}
