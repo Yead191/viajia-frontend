@@ -81,13 +81,13 @@ export default function Navbar({ t }: any) {
         ${
           isScrolled
             ? "bg-black mt-0"
-            : "bg-transparent lg:bg-transparent  lg:backdrop-blur-none mt-6  lg:mt-10 "
+            : "bg-transparent lg:bg-transparent md:px-8 2xl:px-0  lg:backdrop-blur-none mt-6  lg:mt-10 "
         }
         ${showNavbar ? "translate-y-0" : "-translate-y-28"}
       `}
     >
       <div
-        className={`container mx-auto px-4 py-4 transition-colors duration-300`}
+        className={`container mx-auto px-4  py-4 transition-colors duration-300`}
       >
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -102,7 +102,7 @@ export default function Navbar({ t }: any) {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-8">
             {navItems?.map((item, index) => (
               <Link
                 key={index}
@@ -156,13 +156,13 @@ export default function Navbar({ t }: any) {
             </Dropdown>
 
             {/* Download Button (Hidden on Small Devices) */}
-            <button className="hidden md:block bg-[#00BCD1] text-white px-6 py-2 rounded-full transition-colors text-sm">
+            <button className="hidden lg:block bg-[#00BCD1] text-white px-6 py-2 rounded-full transition-colors text-sm">
               Download App
             </button>
 
             {/* Mobile Menu Icon */}
             <button
-              className="md:hidden text-white text-xl"
+              className="lg:hidden text-white text-xl"
               onClick={() => setDrawerOpen(true)}
             >
               <MenuOutlined />

@@ -6,7 +6,7 @@ import ModalButton from "./ModalButton";
 export default async function TravelCTA() {
   const t: any = await getTranslate("travelCTA");
   return (
-    <section className="bg-[#1C1C1E] lg:rounded-2xl py-8 md:py-12 px-4 md:px-5 container mx-auto  lg:mb-12">
+    <section className="bg-[#1C1C1E] lg:rounded-2xl py-8 md:py-12 px-4 md:px-5 container mx-auto  md:mb-12">
       <div className="w-full space-y-8 text-center">
         {/* Top Button */}
         <div className="flex justify-center">

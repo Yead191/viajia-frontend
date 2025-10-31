@@ -7,13 +7,13 @@ export default function ComingSoon() {
 
   return (
     <div
+      id="banner"
       style={{
         backgroundImage: `url("https://i.ibb.co.com/hFb72m83/gif.gif")`,
         backgroundRepeat: "no-repeat",
         backgroundSize: lg ? "" : "contain",
         // backgroundPosition: "center",
         backgroundPosition: "center center",
-
       }}
       className="min-h-screen w-full bg-black"
     ></div>

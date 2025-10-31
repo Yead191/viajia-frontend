@@ -8,7 +8,7 @@ export async function MarketingSection() {
 
   return (
     <section className="pb-8 md:pb-12 px-4 md:px-5 container mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center justify-center ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-16 items-center justify-center ">
         {/* Left Content */}
         <div className="flex flex-col justify-center">
           <p className="section-subtitle mb-8">{translateData.description}</p>
