@@ -13,7 +13,7 @@ export default function Navbar({ t }: any) {
   const pathname = usePathname();
   const cookieLang = Cookies.get("lang");
   const [language, setLanguage] = useState<"en" | "es">(
-    (cookieLang as any) || "en"
+    (cookieLang as any) || "es"
   );
 
   const router = useRouter();
@@ -44,7 +44,7 @@ export default function Navbar({ t }: any) {
         setShowNavbar(true);
       }
 
-      lastScrollTop.current = scrollY <= 0 ? 0 : scrollY; // avoid negative scroll
+      lastScrollTop.current = scrollY <= 0 ? 0 : scrollY; 
     };
 
     globalThis.addEventListener("scroll", handleScroll);

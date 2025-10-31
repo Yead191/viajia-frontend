@@ -21,9 +21,9 @@ export default async function HomePageMain() {
       <Banner translateData={await getTranslate("banner")} />
       <WhyChooseUs />
       <ViajiaSpecialty />
-      <FAQSection items={items} faqTitle={faqTitle} />
       <MarketingSection />
       <TravelCTA />
+      <FAQSection items={items} faqTitle={faqTitle} />
     </section>
   );
 }

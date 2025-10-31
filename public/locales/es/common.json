@@ -19,7 +19,7 @@
         "description": "Mejores combinaciones y precios en tiempo real."
       },
       {
-        "title": "Hoteles Personalizados",
+        "title": "Hoteles inteligentes",
         "description": "Adaptados a tu estilo, presupuesto y ubicación ideal."
       },
       {
@@ -39,7 +39,7 @@
   },
   "viajiaSpecialty": {
     "heading": "¿Qué hace a <highlight>VIAJIA</highlight> Especial?",
-    "subtitle": "La especialidad de Viajia es entenderte. Nuestra IA combina vuelos, hoteles y experiencias en un itinerario personalizado que se adapta perfectamente a tu estilo y presupuesto. Todo lo que necesitas para tu viaje, en un solo lugar.",
+    "subtitle": "Cada viaje comienza con un sueño — y VIAJIA entiende el tuyo. Nuestro asistente inteligente une vuelos, estancias y experiencias inolvidables en un itinerario perfecto hecho solo para ti. Desde el momento en que imaginas tu viaje hasta el instante en que lo vives, VIAJIA convierte cada destino en algo personal, fluido y verdaderamente tuyo.",
     "googlePlay": "Google Play",
     "appStore": "App Store"
   },
