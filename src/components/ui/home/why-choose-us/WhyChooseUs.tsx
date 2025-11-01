@@ -16,7 +16,7 @@ export async function WhyChooseUs() {
         <div className="space-y-8">
           {/* Heading */}
           <div>
-            <h2
+            <h1
               className="section-title"
               dangerouslySetInnerHTML={{
                 __html: whyChooseUs.heading.replace(
@@ -24,7 +24,7 @@ export async function WhyChooseUs() {
                   `<span class="${roboto.className} text-primary">$1</span>`
                 ),
               }}
-            ></h2>
+            ></h1>
             <p className="section-subtitle">{whyChooseUs.subtitle}</p>
           </div>
 

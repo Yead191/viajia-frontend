@@ -11,7 +11,7 @@ export async function ViajiaSpecialty() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center justify-center">
         {/* Left Content */}
         <div className="flex flex-col justify-center">
-          <h2
+          <h1
             className="section-title text-white max-w-[600px]"
             dangerouslySetInnerHTML={{
               __html: translateData.heading.replace(
@@ -19,7 +19,7 @@ export async function ViajiaSpecialty() {
                 `<span class="${roboto.className} text-primary">$1</span>`
               ),
             }}
-          ></h2>
+          ></h1>
 
           <p className="section-subtitle mb-8">
             {/* {t("viajiaSpecialty.subtitle")} */}

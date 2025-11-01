@@ -6,14 +6,14 @@ import ModalButton from "./ModalButton";
 export default async function TravelCTA() {
   const t: any = await getTranslate("travelCTA");
   return (
-    <section className="bg-[#1C1C1E] lg:rounded-2xl py-8 md:py-12 px-4 md:px-5 container mx-auto  md:mb-12">
-      <div className="w-full space-y-8 text-center">
+    <section className="  px-4 md:px-5 container mx-auto  md:mb-12">
+      <div className="w-full space-y-8 text-center bg-[#1C1C1E] rounded-2xl px-4 md:px-5 py-8 md:py-12">
         {/* Top Button */}
         <div className="flex justify-center">
           <Button
             type="text"
             size="large"
-            className="border-[#FFCB20]! text-[#FFCB20]! hover:text-yellow-400 hover:border-yellow-400 rounded-full! px-6 lg:px-10! font-medium h-auto lg:h-14! bg-[#FFCB20]/15! cursor-auto!"
+            className="border-[#FFCB20]! text-[#FFCB20]! hover:text-yellow-400 hover:border-yellow-400 rounded-full! px-6 lg:px-10! font-medium h-auto lg:h-14! bg-[#FFCB20]/15! cursor-auto! text-xs! lg:text-base!"
             icon={<Sparkles size={16} />}
           >
             {t.badge}

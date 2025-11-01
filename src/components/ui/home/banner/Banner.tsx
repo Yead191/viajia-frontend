@@ -45,7 +45,7 @@ export default function Banner({ translateData }: any) {
       </div>
 
       {/* CTA Buttons */}
-     <CTAButtons translateData={translateData} />
+      <CTAButtons translateData={translateData} />
     </section>
   );
 }

@@ -5,12 +5,12 @@ import { Collapse, ConfigProvider } from "antd";
 export default function FAQSection({ items, faqTitle }: any) {
   return (
     <div className="max-w-6xl mx-auto px-4 md:px-4 py-8 pt-8 md:py-12 lg:pb-24">
-      <h2 className="section-title text-center mb-10!">
+      <h1 className="section-title text-center mb-10!">
         <span className="text-white">{faqTitle.part1} </span>
         <span className={`${roboto.className} text-primary font-bold`}>
           {faqTitle.part2}
         </span>
-      </h2>
+      </h1>
 
       <ConfigProvider
         theme={{
