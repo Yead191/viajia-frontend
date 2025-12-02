@@ -49,13 +49,13 @@ export default async function LockerBanner() {
           >
             {translateData.description2}
           </p>
-          <p
+          {/* <p
             data-aos="fade-up"
             data-aos-delay={150}
             className="leading-[148%] text-[#F1F1F1]/90  mt-5 text-sm lg:text-base "
           >
             {translateData.description3}
-          </p>
+          </p> */}
         </div>
         <div data-aos="fade-up" data-aos-delay={250}>
           <a
