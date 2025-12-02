@@ -44,7 +44,7 @@ export async function MarketingSection() {
         {/* Right - Phone Mockups */}
         <div className=" md:h-full flex items-center  justify-end">
           <Image
-            src={"/assets/home/marketing-img.png"}
+            src={"/assets/home/marketing-img-2.png"}
             alt="phone"
             width={1100}
             height={1100}

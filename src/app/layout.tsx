@@ -10,11 +10,13 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
 });
 export const metadata: Metadata = {
-  title: "VIAJIA",
-  description: "Organize your entire trip in a single app",
-  icons: {
-    icon: "/favicon.svg",
-  },
+  title:
+    "VIAJIA & VIAJIA Lockers | Smart itineraries and luggage storage in Oviedo",
+  description:
+    "Plan your trips with AI thanks to VIAJIA. And store your luggage at VIAJIA Lockers, right in the center of Oviedo, near the train station.",
+  // icons: {
+  //   icon: "/favicon.ico",
+  // },
 };
 
 export default function RootLayout({

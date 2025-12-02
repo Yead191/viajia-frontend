@@ -6,7 +6,8 @@ export default function page() {
 }
 
 export const metadata = {
-  title: "Explore | VIAJIA",
+  title:
+    "VIAJIA & VIAJIA Lockers | Smart itineraries and luggage storage in Oviedo",
   description:
-    "Viajia creates real-time personalized itineraries based on your preferences, budget, and travel style. From flights and hotels to unique experiences - all in one place.",
+    "Plan your trips with AI thanks to VIAJIA. And store your luggage at VIAJIA Lockers, right in the center of Oviedo, near the train station.",
 };

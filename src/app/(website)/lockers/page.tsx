@@ -8,5 +8,5 @@ export default function page() {
 export const metadata = {
   title: "Viajia Lockers | VIAJIA",
   description:
-    "Viajia Lockers collaborates with Le CBD Boutique, and our automatic lockers are located inside this trusted store at C. Uría, 76, ensuring safety and convenience for your suitcases.",
+    "Viajia Lockers – Consigna de equipaje en Oviedo (C. Uría 76). Taquillas seguras junto a Renfe y la estación de buses. Reserva tu taquilla online.",
 };

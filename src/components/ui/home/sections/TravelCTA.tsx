@@ -1,7 +1,6 @@
 import { getTranslate } from "@/lib/helpers/getTranslate";
 import { Button } from "antd";
 import { MessageCircle, Sparkles } from "lucide-react";
-import ModalButton from "./ModalButton";
 
 export default async function TravelCTA() {
   const t: any = await getTranslate("travelCTA");

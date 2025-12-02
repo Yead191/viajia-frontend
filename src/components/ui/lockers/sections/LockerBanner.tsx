@@ -14,7 +14,7 @@ export default async function LockerBanner() {
         backgroundSize: "cover",
         backgroundPosition: "top",
       }}
-      className="lg:h-[450px] 2xl:h-[670px] container mb-10 rounded-[30px] flex flex-col items-center justify-center text-center overflow-hidden relative py-16"
+      className="lg:h-[550px] 2xl:h-[670px] container mb-10 rounded-[30px] flex flex-col items-center justify-center text-center overflow-hidden relative py-16 "
     >
       <div className="bg-black/50 absolute h-full w-full z-10" />
 
@@ -22,25 +22,41 @@ export default async function LockerBanner() {
         <h1
           data-aos="fade-up"
           data-aos-delay={100}
-          className="section-title lg:text-[40px]! font-semibold! mb-4!"
+          className="section-title lg:text-[40px]! font-semibold! mb-5!"
           dangerouslySetInnerHTML={{ __html: translateData.title }}
         />
 
         <h6
           data-aos="fade-up"
           data-aos-delay={150}
-          className="text-[#F1F1F1] leading-[148%] max-w-3xl"
+          className="text-[#F1F1F1] leading-[148%] max-w-3xl mx-auto"
         >
           {translateData.subtitle}
         </h6>
 
-        <p
-          data-aos="fade-up"
-          data-aos-delay={150}
-          className="leading-[148%] text-[#F1F1F1]/90 max-w-3xl mt-5 text-sm lg:text-base"
-        >
-          {translateData.description}
-        </p>
+        <div className="max-w-3xl mx-auto flex flex-col space-y-2">
+          <p
+            data-aos="fade-up"
+            data-aos-delay={150}
+            className="leading-[148%] text-[#F1F1F1]/90  mt-5 text-sm lg:text-base "
+          >
+            {translateData.description1}
+          </p>
+          <p
+            data-aos="fade-up"
+            data-aos-delay={150}
+            className="leading-[148%] text-[#F1F1F1]/90  mt-5 text-sm lg:text-base "
+          >
+            {translateData.description2}
+          </p>
+          <p
+            data-aos="fade-up"
+            data-aos-delay={150}
+            className="leading-[148%] text-[#F1F1F1]/90  mt-5 text-sm lg:text-base "
+          >
+            {translateData.description3}
+          </p>
+        </div>
         <div data-aos="fade-up" data-aos-delay={250}>
           <a
             href={
