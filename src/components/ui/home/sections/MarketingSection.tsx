@@ -46,9 +46,8 @@ export async function MarketingSection() {
           <Image
             src={"/assets/home/marketing-img-2.png"}
             alt="phone"
-            width={1100}
-            height={1100}
-            unoptimized
+            width={1200}
+            height={1200}
             className="w-full h-fit object-fit mr-3 lg:mr-0"
           />
         </div>
