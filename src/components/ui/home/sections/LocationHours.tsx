@@ -35,7 +35,7 @@ export default function LocationHours({ t, locationHeading }: any) {
       <div className="grid md:grid-cols-2 gap-8 container items-center mx-auto">
         {/* MAP */}
         <div className="w-full h-[300px] lg:h-[380px] rounded-xl overflow-hidden shadow-lg">
-          <MapContainer
+          {/* <MapContainer
             center={[lat, lng]}
             zoom={250}
             scrollWheelZoom={false}
@@ -45,7 +45,16 @@ export default function LocationHours({ t, locationHeading }: any) {
             <Marker position={[lat, lng]} icon={markerIcon}>
               <Popup>Your Location</Popup>
             </Marker>
-          </MapContainer>
+          </MapContainer> */}
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d512.7419391644452!2d-5.854334440872308!3d43.366434119764875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd368cfdad96e1d1%3A0x2d824f46b485f9fb!2sC.%20Ur%C3%ADa%2C%2076%2C%2033003%20Oviedo%2C%20Asturias%2C%20Spain!5e0!3m2!1sen!2sbd!4v1764655724085!5m2!1sen!2sbd"
+            width="800"
+            height="380"
+            style={{ border: "0" }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
         {/* Opening Hours Card */}
         <div>
