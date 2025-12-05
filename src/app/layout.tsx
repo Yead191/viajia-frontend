@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title:
     "VIAJIA & VIAJIA Lockers | Smart itineraries and luggage storage in Oviedo",
   description:
-    "Plan your trips with AI thanks to VIAJIA. And store your luggage at VIAJIA Lockers, right in the center of Oviedo, near the train station.",
+    "Plan your trips with AI thanks to VIAJIA. And store your luggage at VIAJIA Lockers, right in the center of Oviedo, near the train station",
   // icons: {
   //   icon: "/favicon.ico",
   // },
