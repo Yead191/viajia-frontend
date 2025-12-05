@@ -10,46 +10,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout repository
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      # Step 2: Setup SSH properly
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
-          # Properly write multiline SSH private key
-          cat <<EOF > ~/.ssh/id_ed25519
-${{ secrets.SSH_PRIVATE_KEY }}
-EOF
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H ${{ secrets.HOST }} >> ~/.ssh/known_hosts
 
-      # Step 3: Deploy to server
       - name: Deploy to Server
         run: |
           ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.HOST }} "
             cd ${{ secrets.APP_DIR }}
             git pull origin main
-
-            # Install Node.js 18 if missing
+                # Install Node.js (if missing)
             if ! command -v node &> /dev/null; then
               curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
               sudo apt install -y nodejs
             fi
 
-            # Install PM2 globally if missing
+            # Install PM2 globally (if missing)
             if ! command -v pm2 &> /dev/null; then
               sudo npm install -g pm2
             fi
-
-            # Install dependencies
             npm install
-
-            # Increase memory for Next.js build
-            export NODE_OPTIONS='--max_old_space_size=4096'  # Prevents memory crash
             npm run build
-
-            # Restart or start PM2 process
+            npm i -g pm2
             pm2 restart landing-page || pm2 start npm --name landing-page -- run start
           "
