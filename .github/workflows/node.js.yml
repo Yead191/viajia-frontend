@@ -36,6 +36,7 @@ jobs:
               sudo npm install -g pm2
             fi
             npm install
+            export NODE_OPTIONS='--max_old_space_size=4096'
             npm run build
             npm i -g pm2
             pm2 restart landing-page || pm2 start npm --name landing-page -- run start
