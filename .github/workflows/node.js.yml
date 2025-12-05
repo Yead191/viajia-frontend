@@ -1,4 +1,4 @@
-name: Deploy Landing Page viajia.e
+name: Deploy Landing Page viajia.es
 
 on:
   push:
@@ -22,10 +22,14 @@ jobs:
 
       - name: Deploy to Server
         run: |
-          ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.HOST }} "
+          ssh -tt -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.HOST }} "
+            set -e
+
             cd ${{ secrets.APP_DIR }}
+
             git pull origin main
-                # Install Node.js (if missing)
+
+            # Install Node.js (if missing)
             if ! command -v node &> /dev/null; then
               curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
               sudo apt install -y nodejs
@@ -35,8 +39,9 @@ jobs:
             if ! command -v pm2 &> /dev/null; then
               sudo npm install -g pm2
             fi
+
             npm install
             npm run build
-            npm i -g pm2
+
             pm2 restart landing-page || pm2 start npm --name landing-page -- run start
           "
