@@ -20,7 +20,6 @@ export const metadata: Metadata = {
   // },
 };
 
-// updated
 
 export default function RootLayout({
   children,
