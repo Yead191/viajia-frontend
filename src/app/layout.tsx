@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     "VIAJIA & VIAJIA Lockers | Smart itineraries and luggage storage in Oviedo",
   description:
     "Plan your trips with AI thanks to VIAJIA. And store your luggage at VIAJIA Lockers, right in the center of Oviedo, near the train station.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -26,6 +29,8 @@ export default function RootLayout({
     <AntProvider>
       <html lang="en">
         <head>
+          <link rel="icon" href="/favicon.ico" sizes="any" />
+          <link rel="icon" type="image/png" href="/favicon.png" />
           <Script id="gtm-base" strategy="beforeInteractive">
             {`
               (function(w,d,s,l,i){
