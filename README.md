@@ -15,6 +15,7 @@
 ![Next.js](https://img.shields.io/badge/Next.js-15.4.10-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![React](https://img.shields.io/badge/React-19.2.1-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-v5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![GPT-4o](https://img.shields.io/badge/GPT--4o-Powered-412991?style=for-the-badge&logo=openai&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4.0-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![Ant Design](https://img.shields.io/badge/Ant_Design-v5.27.6-0170FE?style=for-the-badge&logo=antdesign&logoColor=white)
 ![Leaflet Maps](https://img.shields.io/badge/Leaflet-1.9.4-199900?style=for-the-badge&logo=leaflet&logoColor=white)
@@ -28,8 +29,8 @@
 
 **VIAJIA** is an all-in-one modern travel technology platform serving two main purposes:
 
-1. **🤖 AI-Powered Personal Travel Assistant (_Valeria AI_)**:
-   Planning a trip can be overwhelming. **Valeria AI** acts as a personal pocket assistant, engaging travelers in conversational planning to instantly map out real-time, personalized itineraries based on their destination, dates, budget, and travel preferences. From selecting the smartest flights and hotels to recommending curated local dining and unique experiences, VIAJIA coordinates it all in one interactive workspace.
+1. **🤖 AI-Powered Personal Travel Assistant (_Valeria AI_ powered by GPT-4o)**:
+   Planning a trip can be overwhelming. Powered by OpenAI's advanced **GPT-4o** model, **Valeria AI** acts as a personal pocket assistant, engaging travelers in conversational planning to instantly map out real-time, personalized itineraries based on their destination, dates, budget, and travel preferences. From selecting the smartest flights and hotels to recommending curated local dining and unique experiences, VIAJIA coordinates it all in one interactive workspace.
 
 2. **🧳 VIAJIA Lockers (Automated Luggage Storage in Oviedo)**:
    For travelers who want to explore **Oviedo, Spain** without carrying heavy baggage, **VIAJIA Lockers** offers secure, automated, and instant luggage storage. Strategically located inside **Le CBD Boutique (Calle Uría 76)**—directly opposite the Renfe train station and a 3-minute walk from the main bus station—this digital locker booking flow makes storing bags by the hour or day simple, transparent, and completely worry-free.
@@ -38,7 +39,7 @@
 
 ## ✨ Key Features
 
-- **💬 Valeria AI Conversational Itineraries**: Chat with Valeria to create rich travel paths, customized stays, and flights, complete with interactive UI suggestions (integrating budget sliders, Skyscanner flight cards, and booking widgets).
+- **💬 Valeria AI Conversational Itineraries (powered by GPT-4o)**: Chat with Valeria to create rich travel paths, customized stays, and flights, complete with interactive UI suggestions (integrating budget sliders, Skyscanner flight cards, and booking widgets).
 - **🔒 Oviedo Smart Lockers Booking Flow**: Real-time locker selection interface offering sizes:
   - **Medium (S/M)**: Ideal for carry-on suitcases.
   - **Large (L)**: Perfect for medium/large travel suitcases.
